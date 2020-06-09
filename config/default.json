@@ -1,0 +1,4 @@
+{
+    "mongoURI": "mongodb+srv://marek:Szkola_310@myblog-nbbss.mongodb.net/myBlog?retryWrites=true&w=majority",
+    "jwtSecret": "secret"
+}

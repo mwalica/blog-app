@@ -1,10 +1,17 @@
 const express = require("express");
+const connectDB = require('./config/db');
 
 const usersRoutes = require('./routes/users');
 const authRoutes = require('./routes/auth');
 const articlesRoutes = require('./routes/articles');
 
 const app = express();
+
+//Connect Datebase
+connectDB();
+
+//Init Middleware
+app.use(express.json({extended: false}));
 
 app.get("/", (req, res) => res.json({ msg: "Welcom to the MyBlog App" }));
 
