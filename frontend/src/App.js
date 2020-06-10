@@ -1,26 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-function App() {
+import styled, { ThemeProvider } from "styled-components";
+import theme from "./styles/theme";
+
+import Navbar from "./components/layout/Navbar";
+
+import Home from "./components/pages/Home";
+import About from "./components/pages/About";
+import UserArticles from "./components/pages/UserArticles";
+
+import ArticleState from "./context/article/ArticleState";
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ArticleState>
+      <Router>
+        <ThemeProvider theme={theme}>
+          <Navbar />
+          <Container>
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route path="/about" component={About} />
+              <Route exact path="/userarticles" component={UserArticles} />
+            </Switch>
+          </Container>
+        </ThemeProvider>
+      </Router>
+    </ArticleState>
   );
-}
+};
+
+const Container = styled.div`
+  width: 80vw;
+  max-width: 1024px;
+  margin: 0 auto;
+`;
 
 export default App;

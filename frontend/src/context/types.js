@@ -1,0 +1,23 @@
+export const GET_ARTICLES = 'ADD_ARTICLES';
+export const ADD_ARTICLE = 'ADD_ARTICLE';
+export const DELETE_ARTICLE = 'DELETE_ARTICLE';
+export const SET_CURRENT_ARTICLE = 'SET_CURRENT_ARTICLE';
+export const CLEAR_CURRENT_ARTICLE = 'CLEAR_CURRENT_ARTICLE';
+export const UPDATE_ARTICLE = 'UPDATE_ARTICLE';
+export const FILTER_ARTICLES = 'FILTER_ARTICLES';
+export const CLEAR_ARTICLE = 'CLEAR_ARTICLE';
+export const CLEAR_FILTER = 'CLEAR_FILTER';
+export const ARTICLE_ERROR = 'ARTICLE_ERROR';
+
+export const SET_ALERT = 'SET_ALERT';
+export const REMOVE_ALERT = 'REMOVE_ALERT';
+
+
+export const REGISTER_SUCCESS = 'REGISTER_SUCCESS';
+export const REGISTER_FAIL = 'REGISTER_FAIL';
+export const USER_LOADED = 'USER_LOADED';
+export const AUTH_ERROR = 'AUTH_ERROR';
+export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
+export const LOGIN_FAIL = 'LOGIN_FAIL';
+export const LOGOUT = 'LOGOUT';
+export const CLEAR_ERRORS = 'CLEAR_ERRORS';
